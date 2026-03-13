@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#fff5e6,#ffe0cc);
+    color:#333;
+}
+
+/* NAVBAR */
+header{
+    background:linear-gradient(90deg,#ff512f,#dd2476);
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    color:white;
+    font-size:22px;
+    font-weight:700;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:500;
+    position:relative;
+    transition:0.3s;
+}
+
+nav a::after{
+    content:"";
+    width:0%;
+    height:2px;
+    background:white;
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding-top:80px;
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1504674900247-0877df9cc836') center/cover;
+    color:white;
+}
+
+.hero h1{
+    font-size:3rem;
+    animation:fadeIn 1.2s ease;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:1.2rem;
+}
+
+.btn{
+    padding:12px 30px;
+    background:#ffcc00;
+    border:none;
+    border-radius:30px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+    transform:scale(1.1);
+}
+
+/* SECTION */
+section{
+    padding:100px 10%;
+    text-align:center;
+}
+
+/* MENU CARDS */
+.cards{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    width:250px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+.card h3{
+    color:#ff512f;
+}
+
+.price{
+    color:#dd2476;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+/* CONTACT */
+form{
+    max-width:400px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input,textarea{
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+button{
+    padding:12px;
+    border:none;
+    border-radius:25px;
+    background:linear-gradient(90deg,#ff512f,#dd2476);
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Animation */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .hero h1{
+        font-size:2rem;
+    }
+}
