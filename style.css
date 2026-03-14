@@ -14,7 +14,7 @@ body{
 
 /* NAVBAR */
 header{
-    background:linear-gradient(90deg,#ff512f,#dd2476);
+    background:linear-gradient(90deg,#pink,#black);
     padding:18px 8%;
     display:flex;
     justify-content:space-between;
